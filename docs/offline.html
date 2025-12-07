@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Offline - Smart Nutrition Assistant</title>
+	<meta name="robots" content="noindex">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<style>
+		main { min-height: 60vh; display: grid; place-items: center; text-align: center; }
+		.offline { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.2rem; }
+	</style>
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<div class="brand">
+				<img src="assets/img/logo.svg" alt="Smart Nutrition Assistant logo" class="logo">
+				<span class="brand-name">Smart Nutrition Assistant</span>
+			</div>
+		</div>
+	</header>
+	<main class="container">
+		<div class="offline">
+			<h1>You are offline</h1>
+			<p>Please check your internet connection. We will reconnect as soon as a network is available.</p>
+			<p><a class="btn primary" href="index.html">Retry</a></p>
+		</div>
+	</main>
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<div class="footer-brand">Smart Nutrition Assistant</div>
+			<div class="footer-copy">© <span id="year"></span> Smart Nutrition Assistant</div>
+		</div>
+	</footer>
+	<script src="assets/js/app.js"></script>
+</body>
+</html>

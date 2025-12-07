@@ -1,0 +1,17 @@
+{
+	"name": "Smart Nutrition Assistant",
+	"short_name": "SNA",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#16a34a",
+	"description": "An AI-powered personal nutrition assistant for health-conscious individuals and those managing chronic conditions.",
+	"icons": [
+		{
+			"src": "assets/img/logo.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any maskable"
+		}
+	]
+}

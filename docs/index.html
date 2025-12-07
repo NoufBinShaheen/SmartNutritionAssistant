@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="assets/img/logo.svg">
+	<title>Smart Nutrition Assistant</title>
+	<meta name="description" content="An AI-powered personal nutrition assistant for health-conscious individuals and people managing chronic conditions.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+	<link rel="manifest" href="manifest.webmanifest">
+	<meta name="theme-color" content="#16a34a">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="mask-icon" href="assets/img/logo.svg" color="#16a34a">
+	<meta property="og:title" content="Smart Nutrition Assistant">
+	<meta property="og:description" content="AI-powered personal nutrition for healthy people and chronic conditions.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="assets/img/logo.svg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Smart Nutrition Assistant">
+	<meta name="twitter:description" content="AI-powered personal nutrition for healthy people and chronic conditions.">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self';">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<div class="brand">
+				<img src="assets/img/logo.svg" alt="Smart Nutrition Assistant logo" class="logo">
+				<span class="brand-name">Smart Nutrition Assistant</span>
+			</div>
+			<nav class="nav">
+				<a href="#features">Features</a>
+				<a href="#demo">Demo</a>
+				<a href="#faq">FAQ</a>
+				<a href="privacy.html">Privacy</a>
+			</nav>
+			<a class="cta" href="#demo">Try the Demo</a>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero">
+			<div class="container hero-inner">
+				<div class="hero-copy">
+					<h1>Eat Smarter. Feel Better.</h1>
+					<p>AI-powered personal nutrition for health-conscious people and those managing chronic conditions. Get meal plans, grocery lists, and evidence-based guidance tailored to your goals and health profile.</p>
+					<div class="hero-cta">
+						<a class="btn primary" href="#demo">Start Free Demo</a>
+						<a class="btn ghost" href="#features">Explore Features</a>
+					</div>
+				</div>
+				<div class="hero-visual" aria-hidden="true">
+					<div class="phone-mock">
+						<div class="phone-screen">
+							<div class="mock-chat" id="mockChat"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="features" class="features">
+			<div class="container">
+				<h2>Designed for real life nutrition</h2>
+				<div class="grid">
+					<div class="card">
+						<h3>Personalized plans</h3>
+						<p>Meal plans tailored to your goals, preferences, and constraints like gluten-free, low-FODMAP, or vegan.</p>
+					</div>
+					<div class="card">
+						<h3>Chronic condition support</h3>
+						<p>Evidence-based guidance for diabetes, hypertension, kidney disease, PCOS, and more. Always consult your clinician.</p>
+					</div>
+					<div class="card">
+						<h3>Smart grocery lists</h3>
+						<p>Auto-generated shopping lists grouped by aisle with substitutions for budget or availability.</p>
+					</div>
+					<div class="card">
+						<h3>Restaurant & travel</h3>
+						<p>Get menu picks and swaps wherever you are. Learn how to hit macros on the go.</p>
+					</div>
+					<div class="card">
+						<h3>Wearables & labs</h3>
+						<p>Connect your data to see trends across sleep, activity, glucose, blood pressure, and lipid panels.</p>
+					</div>
+					<div class="card">
+						<h3>Coach in your pocket</h3>
+						<p>Chat for quick answers, recipe ideas, or to adjust a plan. Always-on support with human-level empathy.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="demo" class="demo">
+			<div class="container">
+				<h2>Try the interactive demo</h2>
+				<p>Ask anything, like: “Create a 7-day high-protein vegetarian plan under 2,100 kcal/day with 140g protein.”</p>
+				<div class="demo-box">
+					<div class="chat" id="chat">
+						<div class="messages" id="messages" aria-live="polite"></div>
+						<form id="chatForm" class="chat-form" autocomplete="off">
+							<input type="text" id="userInput" name="q" placeholder="Ask about meals, macros, or grocery lists..." aria-label="Message" required>
+							<button class="btn primary" type="submit">Send</button>
+						</form>
+					</div>
+					<div class="side-panel">
+						<div class="panel-section">
+							<h3>Goals</h3>
+							<ul id="goals">
+								<li data-text="Lose weight gradually">Lose weight gradually</li>
+								<li data-text="Gain lean muscle">Gain lean muscle</li>
+								<li data-text="Maintain energy">Maintain energy</li>
+							</ul>
+						</div>
+						<div class="panel-section">
+							<h3>Conditions</h3>
+							<ul id="conditions">
+								<li data-text="Type 2 diabetes">Type 2 diabetes</li>
+								<li data-text="Hypertension">Hypertension</li>
+								<li data-text="IBS (low-FODMAP)">IBS (low-FODMAP)</li>
+							</ul>
+						</div>
+						<div class="panel-section">
+							<h3>Quick prompts</h3>
+							<ul id="prompts">
+								<li data-text="Plan a 1,900 kcal day with 150g protein, dairy-free.">Plan a 1,900 kcal day with 150g protein, dairy-free.</li>
+								<li data-text="7-day Mediterranean plan for blood pressure.">7-day Mediterranean plan for blood pressure.</li>
+								<li data-text="Grocery list for 3 low-sodium dinners.">Grocery list for 3 low-sodium dinners.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="faq" class="faq">
+			<div class="container">
+				<h2>Frequently asked questions</h2>
+				<div class="faq-list">
+					<details>
+						<summary>Is this medical advice?</summary>
+						<p>No. Smart Nutrition Assistant provides educational information and generalized guidance. It does not replace professional medical advice, diagnosis, or treatment. Always consult your healthcare provider for personal medical decisions.</p>
+					</details>
+					<details>
+						<summary>Does it support chronic conditions?</summary>
+						<p>Yes. The assistant can consider dietary patterns for conditions like diabetes, hypertension, kidney disease, PCOS, IBS, and more. Always validate plans with your clinician.</p>
+					</details>
+					<details>
+						<summary>How does the demo work?</summary>
+						<p>The demo runs fully in your browser with a rules-based assistant. The production app connects to an AI API for higher-quality responses.</p>
+					</details>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<div class="footer-brand">Smart Nutrition Assistant</div>
+			<div class="footer-links">
+				<a href="privacy.html">Privacy</a>
+				<a href="terms.html">Terms</a>
+			</div>
+			<div class="footer-copy">© <span id="year"></span> Smart Nutrition Assistant</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/app.js"></script>
+</body>
+</html>
