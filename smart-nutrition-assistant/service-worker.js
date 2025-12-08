@@ -11,7 +11,9 @@ const PRECACHE_URLS = [
 
 self.addEventListener('install', event => {
 	event.waitUntil(
-		caches.open(CACHE_NAME).then(cache => cache.addAll(PRECACHE_URLS)).then(self.skipWaiting())
+		caches.open(CACHE_NAME)
+			.then(cache => cache.addAll(PRECACHE_URLS))
+			.then(() => self.skipWaiting())
 	);
 });
 
@@ -30,7 +32,8 @@ self.addEventListener('fetch', event => {
 			try {
 				const networkResponse = await fetch(request);
 				const cache = await caches.open(CACHE_NAME);
-				cache.put('index.html', networkResponse.clone());
+				// Cache the actual navigation request so each page (e.g., privacy.html, terms.html) is stored distinctly.
+				cache.put(request, networkResponse.clone());
 				return networkResponse;
 			} catch (err) {
 				const cached = await caches.match(request);
